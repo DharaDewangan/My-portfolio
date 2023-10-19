@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPER </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <style>
+         header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: Arial;
+            width: 100%;
+            height: 50px;
+          
+          
+            padding: 5px;
+            margin-right: 10px;
+            position: relative;
+        }
+        .brand-title{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        nav span{
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .icons span{
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .bi-cart2 span{
+            display: inline-block;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            border-radius:20px;
+            background-color: red;
+            color: white;
+            position: absolute;
+            top:10px;
+            right:20px;
+        
+        }
+        article{
+        margin: 30px;
+        text-align: center;
+        padding:15px;
+        width:100%;
+        height: 50px;
+        background-color: black;
+        color: whitesmoke;
+        margin-left: -2px;
+        }
+ 
+        .bi-lightning-fill{
+            color: goldenrod;
+        }
+        
+        main{
+            display:grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            height: 400px;
+           
+        }
+        .women{
+            background-image: url(images/women-fashion.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .men{
+            background-image: url(images/men-fashion.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .kids{
+            background-image: url(images/kids-fashion.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            font-size: 17px;
+            box-shadow: 2px 2px 2px black;
+            font-family: Arial;
+            padding: 10px;
+        }
+        h1{
+            font-size: 50px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+    
+        }
+        .heading{
+            margin: 30px;
+           display: flex;
+           justify-content: space-around;
+        }
+        .part-1{
+            display: flex;
+            font-size: 15px;
+        }
+        .bi-truck,.bi-arrow-left-right,.bi-lock,.bi-tag{
+            margin-right: 10px;
+            color: red;
+        }
+        .para{
+            display:block;
+            color: grey;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        
+        .part-2{
+            margin-top:100px;
+        }
+        .title{
+            color: grey;
+            font-size: 20px;
+        }
+        .sub-title{
+            margin-top: 10px;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: Arial;
+        }
+        .part-2 span{
+            display: block;
+            text-align: center;
+        }
+        p{
+          text-align: center;
+          color: gray;  
+        }
+        .img_part,.img-part2{
+              display: flex;
+              justify-content: space-evenly;
+              margin-bottom: 30px;
+        }
+        .img-1{
+            background-image: url(images/bag.jpg);
+          
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+            width: 300px;
+        }
+        .img-2{
+            background-image: url(images/men_shirt.jpg);
+          
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+            width: 800px;
+        }
+        .img-3{
+            background-image: url(images/women_dress.jpg);
+          
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+            width: 800px;
+        }
+        .img-4{
+            background-image: url(images/sweatshirt.jpg);
+          
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 400px;
+            width: 300px;
+        }
+        footer{
+            display: grid;
+            grid-template-columns:2.4fr 2.4fr 2.4fr 2.4fr 2.4fr ;
+            padding: 15px;
+            background-color: black;
+            color: aliceblue;
+            font-family: Arial;
+          }
+          .footer-title~span{
+            display: block;
+            margin-bottom: 10px;
+          }
+          aside span{
+            font-size: 15px;
+            margin-left: 10px;
+          }
+          .footer-title{
+              font-weight: bold;
+              font-family: Arial;
+              margin-bottom: 20px;
+          }
+         
+        @media screen and (orientation:landscape){
+           header{
+            display: flex;
+             justify-content: space-between;
+            font-family: Arial;
+           }
+           .brand-title{
+            font-size: 30px;
+            font-weight: bold;
+           }
+          .bi-justify{
+            display:none;
+           }
+           nav span{
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .navbar-nav{
+                margin-left: -700px;
+                font-size: 20px;
+            }
+           .icons{
+            margin-right: 20px;
+           }
+        }
+        
+        @media screen and (orientation:portrait){
+            .brand-title{
+            font-size: 30px;
+            font-weight: bold;
+            }
+            nav span{
+                display:none;
+            }
+            .icons span{
+                display: none;
+            }
+            .bi-justify{
+                font-size: 20px;
+                display: inline;
+            }
+            main{
+                width: 100%;
+                height: 400px;
+                display:grid;
+                grid-template-columns: 12fr;
+            }
+            .women{
+            background-image: url(images/women-fashion.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+          
+           
+            }
+            .men,.kids{
+                display: none;
+            }
+            .heading{
+            margin: 30px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+        }
+        .part-1{
+            margin-top: 30px;
+        }
+        .text{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .para{
+            font-size: 17px;
+        }
+        .bi-truck,.bi-arrow-left-right,.bi-lock,.bi-tag{
+            font-size: 25px;
+        }
+         p{
+            font-size: 10px;
+         }
+
+            }
+        
+           
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand-title"><span>Shopper.</span></div>
+        <!-- <nav id="navitems">
+            <span>Home</span>
+            <span>Catalogue</span>
+            <span>Blog</span>
+            <span>Shop</span>
+            <span>Pages</span>
+            <span>Docs</span>
+        </nav>
+        <div class="icons">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart2"><span>2</span></span>
+        </div>
+        <div>
+           <a href=""> <span class="bi bi-justify"></span></a> -->
+           <nav class="navbar navbar-dark navbar-expand-lg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+                 <div class="navbar-collapse collapse" id="menu">
+                  <ul class="navbar-nav">
+                      <li class="nav-item"><a href="#" class="nav-link text-info-emphasis">Home</a></li>
+                      <li class="nav-item"><a href="" class="nav-link text-black">Catalogue</a></li>
+                      <li class="nav-item"><a href="" class="nav-link text-info-emphasis">Blog</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link text-black">Shop</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link text-black">Pages</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link text-black">Docs</a></li>
+                      
+                  </ul>
+                 
+                  </div>
+                  <div class="icons">
+                    <span class="bi bi-search"></span>
+                    <span class="bi bi-person"></span>
+                    <span class="bi bi-heart"></span>
+                    <span class="bi bi-cart2"><span>2</span></span>
+                </div>
+                  </div>
+                 
+          </nav>
+            
+
+          
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-fill"></span><span>HAPPY HOLIDAY DEALS ON EVERYTHING</span> <span class="bi bi-lightning-fill"></span>
+        
+    </article>
+    
+    <section>
+        <main>
+            <div class="women"> 
+                <h1>Women</h1>
+                <button>Shop Women <span class="bi bi-arrow-right"></span>
+                </button>
+            </div>
+            <div class="men">
+                <h1>Men</h1>
+                 <button>Shop Men <span class="bi bi-arrow-right"></span></button>
+            </div>
+            <div class="kids">
+                <h1>Kids</h1>
+                <button>Shop Kids <span class="bi bi-arrow-right"></span></button>
+             </div>
+        </main>
+        <div class="heading">
+            <div class="part-1">
+                <div class="bi bi-truck"></div>
+                <div class="text">
+                    <span>FREE SHIPPING</span>
+                    <span class="para">From all orders over $100</span>
+                </div>
+            </div>
+            <div class="part-1">
+                <div class="bi bi-arrow-left-right"></div>
+            <div class="text">
+                <span>FREE RETURNS</span>
+                <span class="para">Return money within 30 days</span>
+            </div>
+        </div>
+            <div class="part-1">
+                <div class="bi bi-lock"></div>
+            <div class="text">
+                <span>SECURE SHIPPING</span>
+                <span class="para">You are in safe hands</span>
+            </div>
+        </div>
+            <div class="part-1">
+                <div class="bi bi-tag"></div>
+                <div class="text">
+                    <span>OVER 10,000 STYLES</span>
+                    <span class="para">We have everything you need</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="part-2">
+            <div class="text-2" >
+                <span class="title">NEW COLLECTION</span>
+                <span class="sub-title">Best Picks 2019</span>
+            </div>
+            <p>Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, <br>above fly brought Very green.</p>
+        </div>
+        <div class="img_part">
+            <div class="img-1">BAg</div>
+            <div class="img-2"></div>
+            
+        </div>
+        <div class="img-part2">
+            <div class="img-3"></div>
+            <div class="img-4"></div>
+        </div>
+    
+    </section>
+    <footer>
+        <div>
+           <div class="heading">Shopper</div> 
+           <aside>
+            <span class="bi bi-facebook"></span>
+            <span class="bi bi-twitter"></span>
+            <span class="bi bi-instagram"></span>
+            <span class="bi bi-linkedin"></span>
+            <span class="bi bi-youtube"></span>
+           </aside> 
+        </div>
+        <div>
+            <div class="footer-title">SUPPORT</div>
+            <span>Contact US</span>
+            <span>FAQs</span>
+            <span>Size Guide</span>
+            <span>Shipping and Returns</span>
+        </div>
+        <div>
+            <div class="footer-title">SHOP</div>
+            <span>Men's Shopping </span>
+            <span>Women's Shopping</span>
+            <span>Kid's Shopping</span>
+            <span>Discounts</span>
+        </div>
+        <div>
+            <div class="footer-title">COMPANY</div>
+            <span>Our Story</span>
+            <span>Careers</span>
+            <span>Terms and Conditions</span>
+            
+        </div>
+        <div>
+            <div class="footer-title">CONTACT</div>
+            <span>1-202-555-0105</span>
+            <span>1-202-555-0106</span>
+            <span>help@shopper.com</span>
+            
+        </div>
+    </footer>
+</body>
+</html>

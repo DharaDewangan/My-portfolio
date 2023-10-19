@@ -1,0 +1,134 @@
+/* section{
+    height: 100vh;
+} */
+
+.call{
+    font-size:30px;
+  }
+  #icon{
+    font-size: 30px;
+  }
+  .profile-photo{
+    box-shadow: 10px 10px 10px black;
+  }
+ 
+  ul{
+        margin-left: 60%;
+        font-size: 20px;
+        font-weight: bold;
+  }
+  ul li {
+    margin-right: 20px;
+  }
+ 
+  #hirebtn{
+    width: 150px;
+    font-size: 20px;
+  }
+  #hirebtn:hover{
+    background-color: black;
+    color: white;
+  }
+  .aboutme{
+    background: url(../../public/Images/bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 100px 0 0 30px;
+    width: 90%;
+    height:1300px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px 10px black;
+    
+  }
+  .aboutme-title{
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
+  .content{
+    margin:50px 50px 0 50px;
+    color: white;
+  }
+  .quote{
+    margin:50px 50px 0 50px;
+    font-size: 25px;
+    color:aqua;
+  }
+  .skills , .education{
+    margin-top: 50px;
+
+  }
+  .heading{
+    font-size: 50px;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    color: rgb(189, 121, 33);
+  }
+  .skills-img{
+    margin-top: 30px;
+    margin-left: 100px;
+    align-items: center;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+  
+  }
+  .photo{
+    display: flex;
+  }
+ .card-header{
+    font-size: 20px;
+    font-weight: bold;
+ }
+
+.card-box{
+    display: flex;
+}
+ 
+.title{
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Algerian;
+    color: rgb(158, 158, 194);
+    text-decoration:underline
+}
+.project{
+    margin: 50px 500px 0px 50px;
+}
+.shopper-img{
+    width: 250px;
+    height:250px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+.p-title{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: Arial;
+    margin-top: 20px;
+}
+.desc{
+    font-size: 15px;
+    color: white;
+}
+footer{
+  margin-top: 50px;
+  border: 1px solid black;
+  width: 100%;
+  height: 600px;
+  color: white;
+}
+.follow{
+   padding: 20px;
+   font-size: 25px;
+   text-align: center;
+   color: black;
+
+}
+.follow span{
+  margin-right: 30px;
+}

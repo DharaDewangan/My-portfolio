@@ -1,11 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY PORTFOLIO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY PORTFOLIO</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/scss/portfolio-style.css">
+     <link rel="stylesheet" href="./src/scss/porfolio-responsive.css">
 </head>
-<body>
-    
+<body class="container-fluid bg-dark">
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+       
+          
+           <div class="navbar-collapse collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#home" class="nav-link text-info-emphasis">Home</a></li>
+                <li class="nav-item"><a href="#mySelf" class="nav-link text-black">About</a></li>
+                <li class="nav-item"><a href="#work" class="nav-link text-info-emphasis">Projects</a></li>
+                <li class="nav-item"><a href="#Hireme" class="nav-link text-black">Contact</a></li>
+                
+            </ul>
+            </div>
+            </div>
+    </nav>
+  </header>
+  <section class="container-fluid mt-5">
+    <!-- Home -->
+     <div class="content" id="home">
+      <img src="public/Images/Dhara_photo.jpg" alt="Profilephoto" width="400" height="400" class="rounded rounded-circle  profile-photo">
+       <div class="m-4">
+        <h1 class="text-light">Hello! I'm</h1>
+        <h1 class="text-primary">Dhara Dewangan</h1>
+        <h4 class="text-secondary">UI Developer</h4>
+        <br>
+        <br>
+        <h5 class="text-light">A bit about me</h5>
+        <p class="text-secondary">A 22 year old UI Developer and hard working individual <br> looking for a challenging
+          position where I can showcase my <br> skills and extensive understanding of web design to fulfill <br> client
+          demands and surpass their expectations.</p>
+          <br>
+          <button class="btn text-light bg-gradient ms-5" id="hirebtn">Hire me</button>
+        </div> 
+      </div>
+       
+      <!-- About me  -->
+      <div class="aboutme" id="mySelf">
+         <div>
+          <div class="aboutme-title">About Myself</div>
+          <p class="content">
+           Hi, I am part time coffee addict and full-time web developer. A fresher who wishes to equip myself with additional skills and hone my leadership skills by working with a team that enables me to develop and work hard. I have recently graduated my Bachelor's degree in Computer Applications and currently pursing Masters in the same. 
+          </p>
+          <p class="quote">Your Vision , My Ideas - Lets Build A Web Together! </p>
+          
+         </div>
+         <div class="skills">
+          <h1 class="heading">Skilled in</h1>
+          <div class="photo">
+            <div>
+              <span><img class=skills-img src="public/Images/html.png"></span>
+              <span><img class=skills-img src="public/Images/css.png"></span>
+            </div>
+            <div>
+              <span><img class=skills-img src="public/Images/bootstrap.jpeg"></span>
+              <span><img class=skills-img src="public/Images/js.png"> </span>
+            </div>
+            
+          </div>
+         </div>
+         
+         <div class="education">
+          <h1 class="heading">Educational Qualification</h1>
+          <div class="card-box">
+            <!-- card-1 -->
+            <div class="card">
+              <div class="card-header">SSC</div>
+              <div class="card-body d-flex justify-content-between bg-info-subtle">
+              <p>Studied at Teens world Corporate School <br> Boisar , Maharastra 
+              <br>Scored 9.2 CGPA
+              </p>
+               <p>2016-17</p> 
+            </div>
+            </div>
+              
+            <!-- card-2 -->
+            <div class="card">
+              <div class="card-header">HSC</div>
+              <div class="card-body d-flex justify-content-between bg-info-subtle">
+              <p>Studied at Maharishi Vidya Mandir <br> Raipur , Chhattisgarh 
+              <br>Scored 80 %
+              </p>
+               <p>2018-19</p> 
+            </div>
+            </div>
+          </div>
+
+          <div class="card-box">
+            <!-- card-3 -->
+            <div class="card">
+              <div class="card-header">Bachelor of Computer Application</div>
+              <div class="card-body d-flex justify-content-between bg-info-subtle">
+              <p>Graduated from Pt. Ravishankar University<br> Raipur , Chhattisgarh 
+              <br>Scored 82%
+              </p>
+               <p>2020-23</p> 
+            </div>
+            </div>
+             
+            <!-- card-4 -->
+            <div class="card ">
+              <div class="card-header">Master in Computer Application </div>
+              <div class="card-body d-flex justify-content-between bg-info-subtle">
+              <p>Currently studying  at ISBM University <br> Raipur , Chhattisgarh </p>
+               <p>2023-</p> 
+            </div>
+            </div>
+          </div>
+         </div>
+        </div>
+      <!-- projects -->
+      <div class="title" id="work">PROJECTS</div>
+     
+      <div class="project">
+          <div class="p-1">
+            <div> <a href="./public/Shopperr_page.html"><img src="./public/Images/shopper-photo.png" class="shopper-img"></a></div>
+              <div><div class="p-title">Shopper.</div>
+              <p class="desc">This is an e-commerce website created <br> by me for online shopping. <br> Languages Used- <br>HTML <br>CSS <br>Bootstrap</p></div>
+          </div>
+      </div>
+  </section>
+  <footer id="Hireme">
+    <div class="forms">
+       <div class="form-heading">Get in Touch.</div>
+       <form>
+        <input type="text" placeholder="Your name" size="37"> <br> <br>
+        <input type="email" placeholder="Your mail" size="37"> <br> <br>
+       <textarea name="Message" id="" cols="40" rows="10" placeholder="Drop a message"></textarea>
+       <br><br> <button CLASS="btn btn-primary">SEND ME</button>
+       </form>
+    </div>
+    <div class="personal-info">
+      <div class="info">
+        <span class="bi bi-geo-alt"> - Raipur, Chhattisgarh</span>
+      </div>
+      <div class="info"> <span class="bi bi-telephone"> - 8596742567</span></div>
+      <div class="info"> <span class="bi bi-envelope"> - xyz@gmail.com</span></div>
+      <div class="follow">
+        <span class="bi bi-instagram"></span>
+        <span class="bi bi-linkedin"></span>
+        <span class="bi bi-github"></span>
+        <span class="bi bi-whatsapp"></span>
+      </div>
+    </div>
+
+    </div>
+  </footer>
 </body>
 </html>
