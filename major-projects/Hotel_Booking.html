@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <script type="text/javascript">
+      
+      function BookHotel(){
+         
+                 var Days = document.getElementById("numDay");
+                 var Persons = document.getElementById("numPerson").value;
+                
+                 var RoomType = "";
+                 var Roomcost = 0;
+         
+                 var Amenities= "";
+                 var Amenitiescost = 0;
+         
+                 var TotalAmt;
+                 var BalanceAmt = 0;
+
+        // Customer Details
+        document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+        document.getElementById("lblDate").innerHTML = document.getElementById("dateCheckin").value;
+        document.getElementById("lblDays").innerHTML = Days.value;
+
+        // Select Room type
+       
+        var DeluxRoom = document.getElementById("optroom1");
+        var SuiteRoom = document.getElementById("optroom2");
+        var image = document.getElementById("RoomImg");
+     
+     if(DeluxRoom.checked){
+           RoomType = DeluxRoom.value;
+           Roomcost = 2500;
+           image.src = "../public/Images/deluxe room.jpg";
+         }
+         if(SuiteRoom.checked){
+           RoomType = SuiteRoom.value;
+           Roomcost = 4000;
+           image.src = "../public/Images/suite room.jpg";
+         }
+        document.getElementById("lblPerson").innerHTML = Persons;
+        document.getElementById("lblRoom").innerHTML = RoomType;
+
+        //  SelectAmenities
+     var Ac = document.getElementById("chkAc");
+     var Locker = document.getElementById("chkLocker");
+
+
+     if(Ac.checked){
+         Amenities += Ac.value + "<br>";
+         Amenitiescost = 1000;
+         Roomcost += Amenitiescost;
+     }
+     if(Locker.checked){
+         Amenities += Locker.value + "";
+         Amenitiescost = 300;
+         Roomcost += Amenitiescost;
+     }
+
+     document.getElementById("lblAmenities").innerHTML = Amenities;
+    
+     //Amount details
+     TotalAmt = Roomcost * Days.value;
+     BalanceAmt = TotalAmt - document.getElementById("txtAmount").value;
+
+     if(Persons > 2){
+     TotalAmt +=  (Persons-2)*1000;
+     BalanceAmt = TotalAmt - document.getElementById("txtAmount").value;
+     } 
+     
+      console.log(TotalAmt);
+      console.log(BalanceAmt);
+
+        document.getElementById("lblAdvAmt").innerHTML = document.getElementById("txtAmount").value + "/-";
+        document.getElementById("lblBalAmt").innerHTML = BalanceAmt + "/-";
+
+       }
+    </script>
+    
+  <style>
+    button{
+        font-family: Arial;
+    }
+  </style>
+
+</head>
+<body class="container-fluid" style="background-color:rgb(245, 235, 240)">
+   <h2 class="m-3 fw-bold text-center" style="font-family: 'Dancing Script', cursive;">Welcome Home <span class="bi bi-house-door"></span></h2>
+   <ul class="nav justify-content-center fw-bold fs-4 nav-tabs">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="details-tab" data-bs-toggle="tab" data-bs-target="#details" type="button" role="tab" aria-controls="home" aria-selected="true">Customer Details</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="roomType-tab" data-bs-toggle="tab" data-bs-target="#roomType" type="button" role="tab" aria-controls="profile" aria-selected="false">Room Type</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Amenities-tab" data-bs-toggle="tab" data-bs-target="#amenities" type="button" role="tab" aria-controls="messages" aria-selected="false">Amenities</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="Amount-tab" data-bs-toggle="tab" data-bs-target="#advAmount" type="button" role="tab" aria-controls="settings" aria-selected="false">Advance</button>
+      </li>
+     
+   </ul>
+
+   <!-- Customer Details -->
+    <div class="tab-content mt-5 d-flex justify-content-center">
+        <div class="tab-pane w-50 active" id="details" >
+            <dl>
+               <label class="form-label fw-bold">Customer Name</label>
+                <input type="text" id="txtName" class="form-control">
+                <label class="form-label fw-bold">Check in Date</label>
+                <input type="date" id="dateCheckin" class="form-control">
+                <label class="form-label fw-bold">Total no of Days</label>
+                <input type="number" id="numDay" class="form-control">
+                <label class="form-label fw-bold">Total no of Persons</label>
+                <input type="number" id="numPerson" class="form-control">
+
+            </dl>
+        </div>
+    </div>
+
+    <!-- Select Room type -->
+    <div class="tab-content mt-5 d-flex text-center justify-content-center">
+        <div class="tab-pane w-50 " id="roomType" >
+          <div class="d-flex ">
+            <div class="me-5">
+                <img src="../public/Images/deluxe room.jpg" alt="Delux-Rooms" width="300" height="300"> <br>
+                <input type="radio" name="room" id="optroom1" value="Delux Room" class="form-check-input fs-4 mt-4"><label class=" fw-bold fs-3 mt-3">&nbsp;Delux Room</label> <br> <label class="form-label fs-3 ms-5 ">2500/-</label>        
+            </div>
+            <div class="ms-5">
+                <img src="../public/Images/suite room.jpg" alt="Suite-Rooms" width="300" height="300"> <br>
+                <input type="radio" name="room" id="optroom2" value="Suite Room" class="form-check-input fs-4 mt-4"><label class=" fw-bold fs-3 mt-3">&nbsp;Suite Room</label> <br> <label class="form-label fs-3 ms-5 ">4000/-</label>        
+            </div>
+          </div>
+        </div>
+    </div> 
+
+    <!-- select amenities -->
+    <div class="tab-content mt-5 d-flex text-center justify-content-center">
+        <div class="tab-pane w-50 " id="amenities" >
+          <div class="d-flex ">
+            <div class="me-5">
+                <img src="../public/Images/ac.jpg" alt="Delux-Rooms" width="300" height="300"> <br>
+                <input type="checkbox" id="chkAc" value="A/C" class="form-check-input fs-4 mt-4"><label class=" fw-bold fs-3 mt-3">&nbsp;A/C</label> <br> <label class="form-label fs-3 ms-5 ">1000/-</label>        
+            </div>
+            <div class="ms-5">
+                <img src="../public/Images/locker.jpg" alt="Suite-Rooms" width="300" height="300"> <br>
+                <input type="checkbox" id="chkLocker" value="Locker" class="form-check-input fs-4 mt-4"><label class=" fw-bold fs-3 mt-3">&nbsp;Locker</label> <br> <label class="form-label fs-3 ms-5 ">300/-</label>        
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Advance amount -->
+    <div class="tab-content">
+        <div class="tab-pane " id="advAmount">
+            <div class="d-flex justify-content-center">
+             <span class="me-4 fs-4 fw-bold">Advance Amount </span>
+             <span><input type="text" id="txtAmount" ></span>
+            </div>
+
+           <div class="d-flex justify-content-center mt-5">
+            <button class="btn btn-warning ps-4 pe-4 fs-4" onclick="BookHotel()" data-bs-target="#summaryDetails" data-bs-toggle="modal">Book </button>
+           </div>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="modal" id="summaryDetails">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Booking Details </h3>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-between">
+                 <div>
+                   <div>
+                    <span class="fw-bold">Customer Name:</span>
+                    <span class="text-dark" id="lblName"></span>
+                   </div>
+                   <div>
+                    <span class="fw-bold">Check In Date :</span>
+                    <span class="text-dark" id="lblDate"></span>
+                   </div>
+                   <div>
+                    <span class="fw-bold">Total No of days :</span>
+                    <span class="text-dark" id="lblDays"></span>
+                   </div>
+                   <div>
+                    <span class="fw-bold">Total No of Persons :</span>
+                    <span class="text-dark" id="lblPerson"></span>
+                   </div>
+                   <div>
+                    <span class="fw-bold">Room Type  :</span>
+                    <span class="text-dark" id="lblRoom"></span>
+                   </div>
+                   <div>
+                    <span class="fw-bold">Amenities:</span>
+                    <span id="lblAmenities"></span>
+                   </div>
+                   <div>
+                    <span class="fw-bold">Advance Amount:</span>
+                    <span class="text-dark" id="lblAdvAmt"></span>
+                   </div>
+                   <div>
+                    <span class="fw-bold">Balance Amount:</span>
+                    <span class="text-dark" id="lblBalAmt"></span>
+                   </div>
+                 </div>
+                <!-- image  -->
+                 <div>
+                  <img width="200" height="200" id="RoomImg">
+                 </div>
+                </div>
+                <div class="modal-footer fs-5 fw-bold text-danger">
+                    Thankyou! Visit Again <span class="bi bi-emoji-smile-fill"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

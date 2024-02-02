@@ -1,0 +1,135 @@
+@media screen and (max-width:750px) {
+     .header-btn button{
+     display:block;
+    }
+    header nav ul{
+        display: none;
+    }
+    
+    #home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: auto;
+    }
+    #home .myPhoto{
+        margin-left: 0;
+        width: 60vh;
+       height: 60vh;
+
+    }
+    #home .myInfo{
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+    }
+    #home .myInfo .row-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:40vh;
+    }
+    #home .myInfo .row-2{
+        height: 20vh;
+    }
+}
+
+@media screen and (min-width:751px) {
+    .header-btn button{
+    display:none;
+  
+   }
+   
+   header nav ul{
+    margin-left: 50px;
+       display:flex;
+   }
+   header nav {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (min-width:751px) and (max-width:1200px) {
+    #home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: auto;
+    }
+    #home .myPhoto{
+        margin-left: 0;
+        width: 90vh;
+       height: 70vh;
+
+    }
+    #home .myPhoto img{
+        width: 70vh;
+        height: 60vh;
+    }
+    #home .myInfo{
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+    }
+    #home .myInfo .row-1{
+      margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:50vh;
+    }
+    #home .myInfo .row-2{
+        height: 20vh;
+    }
+}
+
+
+@media screen and (max-width:630px) {
+    .title .t1{
+        position: absolute;
+        text-align: center;
+          top: 5px;
+          /* left: 0; */
+          font-size: 11vw;
+          color: rgba(255, 255, 255, 0.1);
+          z-index: -1;
+          font-weight: 900;
+      }
+      .title .t2{
+        font-size: 33px;
+          font-weight: 700;
+      }
+      #aboutMe .personalinfo .myInfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: 20px 0px 0px 20px;
+       
+      }
+      #aboutMe .personalinfo .myInfo .infoTitle span {
+        margin-right: 20px;
+      }
+      #aboutMe .personalinfo .myInfo .infoTitle{
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        font-weight: bold;
+        margin: 0px 10px 0px 0px;
+      }
+      #aboutMe .personalinfo .myInfo .infotext{
+        display: flex;
+        flex-direction: column;
+        font-size:15px;
+        font-weight: bold;
+        margin: 5px 0px 0px 30px;
+      }
+      .personalinfo button{
+           font-size: 15px;
+      }
+}

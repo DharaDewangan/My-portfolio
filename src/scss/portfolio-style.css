@@ -13,19 +13,29 @@ header{
   display: flex;
   justify-content: space-between;
   color: aliceblue;
-  position: sticky;
+  /* position: sticky; */
+  top: 0;
 }
 header nav ul{
   display: flex;
  
 }
 header nav ul li {
+  font-size: 1.2rem;
   display: flex;
   margin-right: 2rem;
+  /* font-weight: bold; */
+  font-family: Arial;
 }
+header nav ul li:hover {
+ color: rgb(121, 121, 216);
+ border-bottom: 2px solid goldenrod;
+ transition: border-bottom 0.5s ease-in-out;
+}
+/* popup area */
 .popup-mobile-menu.menu-open {
   /* make it hidden and visible it in click */
-  visibility: hidden;
+  visibility:hidden;
   opacity: 1;
 }
 .popup-mobile-menu {
@@ -131,8 +141,10 @@ ul li {
   font-size: 1rem;
   line-height: 30px;
   color: var(--color-body)
-}
- 
+} 
+ ul a{
+   color: whitesmoke;
+ }
 .popup-mobile-menu.menu-open .inner .content .primary-menu li {
     display: block;
     margin: 8px 0;
@@ -167,3 +179,294 @@ ul li {
    color:blanchedalmond ;
    
 }
+
+/* home area */
+section{
+  /* width: 100%; */
+  margin-top: 100px
+}
+#home{
+  
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+}
+
+#home .myPhoto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vh;
+  height:80vh;
+  border: 2px solid transparent;
+  box-shadow:10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  margin-left: 100px;
+ 
+}
+#home .myInfo{
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+}
+#home .myInfo .row-1{
+  width: 70vh;
+  height: 60vh;
+  box-shadow:10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+}
+#home .myInfo .row-1:hover ,#home .myInfo .row-2:hover, #home .myPhoto:hover {
+  margin-top: -10px;
+  transition: 0.5s ease-in-out;
+}
+#home .myInfo .row-2{
+  width: 70vh;
+  height: 20vh;
+  box-shadow:10px 10px 19px #15171a, -10px -10px 19px #262a2e;
+}
+#home .myInfo .row-2 button{
+  box-shadow:10px 10px 19px #38393b, -10px -10px 19px #38393b;
+}
+
+#home .myInfo .row-2 button:hover{
+   margin-bottom:40px;
+   transition: 0.5s ease-in-out;
+ 
+}
+
+/* about me area */
+#aboutMe{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* margin: 150px 50px; */
+  margin-top: 150px;
+  position: relative;
+}
+.title .t1{
+  position: absolute;
+  text-align: center;
+    top: 0px;
+    /* left: 0; */
+    font-size: 7vw;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    font-weight: 900;
+}
+.title .t2{
+  font-size: 50px;
+    font-weight: 700;
+}
+.personalinfo{
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.personalinfo p{
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 0px 20px;
+  
+}
+#aboutMe .personalinfo .myInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 20px;
+  
+}
+
+#aboutMe .personalinfo .myInfo .infoTitle{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#aboutMe .personalinfo .myInfo span {
+  margin-bottom: 10px;
+}
+#aboutMe .personalinfo .myInfo .infotext{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 5px 0px 0px 30px;
+  
+}
+.personalinfo button{
+  font-size: 15px;
+  padding: 10px 15px 10px 15px;
+}
+
+/* resume area */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.mt--45 {
+  margin-top: 45px !important;
+}
+
+.row > [class*=col] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row ul li button{
+  font-size: 20px;
+  color: white;
+}
+.row ul li button:active{
+  font-size: 20px;
+  background-color: wheat;
+  color: red;
+}
+
+/* Tab content */
+#education{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.inner-div{
+  width: 40%;
+  /* border: 2px solid white; */
+}
+.study-1{
+
+  border-left: 8px solid #FFFFFF1A;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.study-1 .circle ,.study-2 .circle
+{
+  position: absolute;
+  left: -15px;
+  top: 56px;
+  border: 5px solid rgb(46, 43, 43);
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  z-index: 1;
+  background-color: rgba(223, 49, 49, 0.668);
+}
+.study-1 .left_stick, .study-2 .left_stick
+{
+  position: absolute;
+  left: -15px;
+  top: 63px;
+  border: 5px solid #FFFFFF1A;
+  width: 68px;
+  height: 8px;
+  z-index: -1;
+  
+}
+
+.study-1 .school, .study-2 .school{
+  width: 80% ;
+  height: 240px;
+  background-color:#FFFFFF1A;
+  color: white;
+   padding-left: 10px;
+   border-radius: 10px;
+  box-shadow:10px 10px 19px #161718, -2px -3px 19px #1b1c1c;
+}
+.study-1 .school, .study-2 .school:hover{
+  opacity:1;
+}
+
+.study-2{
+  height: 300px;
+  border-left: 8px solid #FFFFFF1A;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+/* skills */
+#skills h3{
+  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(176, 209, 238);
+}
+
+#skills .skill_list{
+  margin-top: 20px;
+}
+
+input[type="range"] {
+  accent-color:rgb(219, 133, 21) ;
+}
+
+/* projects */
+#projects .proj-img{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.img1{
+ background-image:url("../../public/Images/shopper-photo.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+
+ 
+}
+
+/* contact area */
+#contact .contactarea-1{
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#contact .contactarea-1 .ct1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .contactarea-1 .contact-details{
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-color:#FFFFFF1A;
+  position: relative;
+  
+}
+#contact .contactarea-1 .contact-details span{
+  font-size: 2em;
+  position: absolute;
+  top: 46px;
+  left: 57px;
+}
+
+#contact .contact-box{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+  }
+
+  .contact-box .inner-cont-box{
+    background-color: white;
+    /* width: 700px; */
+    
+  }
+  .form-group{
+    margin-bottom: 1rem;
+    
+  }
+ 

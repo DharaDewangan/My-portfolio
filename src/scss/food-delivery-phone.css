@@ -1,0 +1,32 @@
+@media screen and (max-width:1011px) {
+    /* navigation area */
+  #navbar{
+    flex-direction: column;
+  }
+  #navbar ul li a{
+    font-size:5px;
+    margin: 0;
+    padding: 0;
+  }
+    /* home area */
+      #home{
+        padding: 26px 106px;
+        height: 351px;
+      }
+      .main-title{
+        font-size: 1.8rem;
+      }
+     /* services area */
+     #services{
+         flex-direction: column;
+     }
+     /* our chef  */
+     #chef{
+        /* overflow: hidden; */
+        flex-wrap: wrap;
+        
+     }
+     
+     /* contact us  */
+     /* footer */
+}
