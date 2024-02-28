@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-Formatting</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <style>
+            .style{
+                display: flex;
+                flex-direction: column;
+            }
+            label{
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+           
+        </style>
+        <script>
+              
+          function FontSizeChange(){
+           var Fontsize = document.getElementById("rangeFont").value;
+           document.querySelector("p").style.fontSize = `${Fontsize}rem`;
+         }
+
+         function Alignleft(){
+           document.querySelector("p").style.textAlign = "left";
+         }
+         function Aligncenter(){
+           document.querySelector("p").style.textAlign = "center";
+         }
+         function Alignright(){
+           document.querySelector("p").style.textAlign = "right";
+         }
+
+         function ColorPick(){
+          document.querySelector("p").style.color = document.getElementById("colorPick").value;
+         }
+
+         function StyleChange(){
+            var opt = document.getElementById("selStyle").value;
+            if(opt == "Bold"){
+              document.querySelector("p").style.fontWeight = "bold";
+           
+           } else if(opt == "Italic"){
+            document.querySelector("p").style.fontStyle = "italic";
+           }   else{
+                    document.querySelector("p").style.fontWeight = "normal";
+                    document.querySelector("p").style.fontStyle = "normal";
+                }
+      
+         }
+        </script>
+</head>
+<body class="container-fluid">
+    <h1 class="text-center mt-4" style="font-size: 3rem; font-weight: bold;">String Formatting</h1>
+    <div class="d-flex justify-content-around" style="width: 100%; height: 100px; background-color:rgb(166, 166, 218); color: white;">
+        <!-- font size -->
+      <div class="style">
+        <label class="form-check-label">Font Size</label>
+        <input type="range" class="form-range w-100" id="rangeFont" min="1" max="7" onchange="FontSizeChange()">
+          <div class="d-flex justify-content-between">
+            <span>1</span>
+            <span>7</span>
+           </div>
+      </div>
+      <!-- color picker -->
+       <div class="style">
+        <label>Color</label>
+        <input class="form-control-color w-100" type="color" id="colorPick" onclick="ColorPick()">
+       </div>
+       <!-- styling -->
+       <div class="style">
+        <label>Style</label>
+        <select class="form-select" id="selStyle" onchange="StyleChange()">
+            <option>Select style</option>
+             <option id="optBold" >Bold</option>
+             <option id="optItalic" >Italic</option>
+
+        </select>
+       </div>
+        <!-- Align text -->
+        <div class="style">
+            <label class="form-label text-center">Align</label>
+           <div class="d-flex">
+            <button class="btn btn-primary me-1 btnLeft" onclick="Alignleft()"><span class="bi bi-justify-left"></span>Left</button>
+            <button class="btn btn-primary me-1 btnCenter" onclick="Aligncenter()"><span class="bi bi-justify"></span>Center</button>
+            <button class="btn btn-primary btnRight" onclick="Alignright()"><span class="bi bi-justify-right"></span>Right</button>
+           </div>
+        </div>
+
+    </div>
+     <!-- display Text -->
+     <div style="width: 100%; height:230px; background-color:rgb(166, 166, 218); margin-top:50px;">
+        <p class="p-4">Sample Text</p>
+     </div>
+
+</body>
+</html>
